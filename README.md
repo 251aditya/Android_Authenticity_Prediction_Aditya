@@ -9,43 +9,41 @@
 
 
 ## Introduction
-In modern urban cities, the introduction of rental bikes has significantly enhanced mobility and provided a convenient mode of transportation. To maximize the benefits of this service, it is essential to ensure that rental bikes are available and accessible to the public at the right time, thereby minimizing waiting times and improving user satisfaction.
-A major challenge in this endeavor is maintaining a stable and sufficient supply of rental bikes across the city. This requires accurately predicting the number of bikes needed at each hour to meet demand. Effective prediction helps in ensuring that bikes are evenly distributed, reducing shortages and surpluses at various locations.
+Dataset Description:
+This comprehensive dataset comprises over 30,000 Android applications sourced from diverse origins: Google Play Store, third-party app markets (hiapk, app china, Android, mumayi, gfan, slideme, pandaapp), and dedicated malware repositories.
 
-The key to achieving this lies in leveraging predictive analytics. By analyzing historical data and identifying patterns in bike usage, we can forecast the hourly demand for rental bikes. Factors such as weather conditions, time of day, day of the week, public events, and seasonal variations can be incorporated into the predictive model to enhance its accuracy.
+Data Collection & Features:
+Data Collection: Applications were meticulously collected over a three-year period, ensuring a continuous stream of data.
+Feature Extraction: Key features extracted for each app encompass permissions requested during both installation and runtime. This granular approach provides a robust foundation for analysis.
+
+Malware Representation:
+Malware Families: The dataset encompasses 81 distinct malware families, offering a diverse and challenging landscape for malware detection models.
+Binary Classification: The primary objective is to classify each app into one of two categories:
+Benign (0): Applications with no malicious intent.
+Malware (1): Applications exhibiting malicious behavior.
+
+Data Format:
+Feature File: A dedicated file outlines the complete list of extracted features.
+.apk Files: Individual .apk files are associated with each app, containing detailed information about requested permissions and their respective packages.
+
+Project Goals:
+This dataset presents a valuable resource for developing and evaluating machine learning models capable of accurately detecting Android malware based on its permission usage patterns.
+
+Potential Research Areas:
+Malware Classification: Develop and fine-tune machine learning models (e.g., decision trees, random forests, neural networks) to effectively classify apps as benign or malicious.
+Feature Importance Analysis: Investigate the significance of different permission groups in malware detection.
 
 ## Problem_Statement
-Rental bikes have become a cornerstone of enhanced mobility and convenience. Ensuring a stable supply of rental bikes at the right time and place is crucial to minimize waiting times and maximize user satisfaction. However, striking the right balance in bike supply is challenging. Excess bikes lead to wasted resources, including maintenance costs and parking space, while insufficient bikes result in revenue loss and potential long-term customer dissatisfaction.
+The rapid growth of Android applications has led to a significant increase in the risk of malicious apps infiltrating the ecosystem. These malicious apps pose a serious threat to user privacy and security by stealing sensitive data, performing unauthorized actions, and potentially damaging devices. To mitigate this risk, it is imperative to develop a robust machine learning model capable of accurately predicting the authenticity of Android apps.
 
-To address this, our project aims to investigate key variables that influence the hourly demand for rental bikes and develop a predictive model to estimate the number of bikes required each hour. Our goals are to:
+So we can understand Android application (app) is authentic or not. With the increase in the number of mobile apps, the risk of downloading malicious apps has also increased. Malicious apps can steal sensitive user data, perform unwanted actions, and damage the user's device. Therefore, it is essential to develop a model that can accurately predict the authenticity of Android apps and help users make informed decisions about which apps to download and install on their devices. The challenge is to identify the relevant features that can distinguish between authentic and malicious apps and to train a classification model that can generalize well to new, unseen apps. Additionally, the model should be able to handle the large and dynamic nature of the mobile app ecosystem, where new apps are constantly being developed and released.
 
-Maximize the availability of bikes to customers.
-Minimize the waiting time for rental bikes.
-Target Column: The number of bikes rented per hour.
+Ultimately, the success of this project will contribute to a safer and more secure Android ecosystem, empowering users to navigate the vast app marketplace with confidence.
 
 ## Dataset
-The dataset used in this project is sourced from [here](https://drive.google.com/file/d/1MdmsaoWiqf0wbCi7ct5knthob7fUDwfM/view?usp=sharing) It comprises a comprehensive collection of information related to Airbnb bookings, including:
+The dataset used in this project is sourced from [here](https://drive.google.com/file/d/1MdmsaoWiqf0wbCi7ct5knthob7fUDwfM/view?usp=sharing) It comprises a comprehensive collection of information related to Android Authenticity Prediction, including:
 
-Input Columns (13 variables):
-
-            1.Date :- Date-month-year
-            2.Hour :- Hour of the Day
-            3.Temperature (°C):- Temperature in Celsius
-            4.Humidity (%) :- Humidity in percentage
-            5.Wind speed (m/s):- Windspeed in m/s
-            6.Visibility (10m):- Visibility in 10m
-            7.Dew point temperature (°C):- due point temperature in Celsius 
-            8.Solar Radiation (MJ/m²):- Solar radiation in MJ/m2
-            9.Rainfall (mm):- Rainfall in mm
-            10.Snowfall (cm):- Snowfall in cm
-            11.Seasons:- >> Winter 
-                         >> Spring
-                         >> Summer
-                         >> Autumn ]
-            12.Holiday :- Wheather the day is considered a holiday or No holiday
-            13.Functioning Day :- Whether the day is neither a weekend nor Holiday 
-                              >> No- (non functional day)
-                              >> Yes-(Functional day)
+Input Columns (184 variables) and Rows(30000).
 
 ## Installation
 To run this project on your local machine, follow these steps:
