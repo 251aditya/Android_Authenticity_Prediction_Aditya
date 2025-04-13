@@ -56,7 +56,7 @@ To run this project on your local machine, follow these steps:
 In this project, we focused on detecting malicious Android applications using various machine learning classification techniques. After evaluating multiple models including Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, and XGBoost Classifier, we chose the **XGBoost Classifier** as our final model.
 
 🔍 **Model Evaluation & Selection**
-![Alt text](path/to/your/model.png)
+![image](model.png)
 
 
 While Logistic Regression showed slightly higher performance in terms of accuracy and ROC AUC after cross-validation, **XGBoost was selected as the final model** due to several key advantages:
